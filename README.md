@@ -71,9 +71,9 @@ Hazır sürümü indirmek için repo sayfasındaki **Releases** bölümüne giri
 
 # Ekran Görüntüleri
 
-## Uygulama
+## 📸 Uygulama Arayüzü
 
-![Uygulama](docs/dashboard.png)
+![Dashboard](docs/dashboard.png)
 
 ---
 
