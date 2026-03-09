@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instagram İstek İptal Aracı</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="window-bar">
+    <div class="window-drag">
+      <div class="window-brand">
+        <div class="window-brand-dot"></div>
+        <span>Instagram İstek İptal Aracı</span>
+      </div>
+    </div>
+
+    <div class="window-controls">
+      <button id="winMinBtn" class="win-btn" title="Küçült">—</button>
+      <button id="winMaxBtn" class="win-btn" title="Büyüt">▢</button>
+      <button id="winCloseBtn" class="win-btn win-close" title="Kapat">✕</button>
+    </div>
+  </div>
+
+  <div class="app-shell">
+        <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-badge">IG</div>
+        <div>
+          <h1>Instagram İstek İptal Aracı</h1>
+          <p>Premium otomasyon paneli</p>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">Genel</div>
+        <div class="sidebar-card nav-card">
+          <div class="nav-item active">
+            <span class="nav-icon">◌</span>
+            <div>
+              <span class="nav-title">Durum</span>
+              <strong id="statusText">Hazır</strong>
+            </div>
+          </div>
+
+          <div class="nav-item">
+            <span class="nav-icon">✦</span>
+            <div>
+              <span class="nav-title">Uyarı</span>
+              <strong id="alertText">-</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">İlerleme</div>
+        <div class="sidebar-card">
+          <div class="progress-wrap">
+            <div id="progressBar"></div>
+          </div>
+          <p id="progressText">İlerleme: %0</p>
+          <p id="etaText">Tahmini kalan süre: -</p>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">Özet</div>
+        <div class="mini-grid">
+          <div class="mini-box">
+            <span>Toplam</span>
+            <strong id="statTotal">0</strong>
+          </div>
+          <div class="mini-box">
+            <span>İşlenen</span>
+            <strong id="statCurrent">0</strong>
+          </div>
+          <div class="mini-box">
+            <span>Başarılı</span>
+            <strong id="statSuccess">0</strong>
+          </div>
+          <div class="mini-box">
+            <span>Başarısız</span>
+            <strong id="statFail">0</strong>
+          </div>
+          <div class="mini-box mini-box-wide">
+            <span>Kalan</span>
+            <strong id="statRemaining">0</strong>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <section class="top-grid">
+        <div class="panel hero-panel">
+          <div class="panel-header">
+            <div>
+              <h2>HTML Kaynağı</h2>
+              <p>Bekleyen isteklerin bulunduğu export dosyasını seç</p>
+            </div>
+            <div class="panel-badge">Kaynak</div>
+          </div>
+
+          <div class="hero-actions">
+            <button id="pickHtmlBtn" class="primary-btn">HTML Dosyası Seç</button>
+          </div>
+
+          <div class="info-list">
+            <div class="info-item">
+              <span>Dosya</span>
+              <strong id="filePath">Dosya seçilmedi.</strong>
+            </div>
+            <div class="info-item">
+              <span>Toplam kullanıcı</span>
+              <strong id="userCount">0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel settings-panel">
+          <div class="panel-header">
+            <div>
+              <h2>Ayarlar</h2>
+              <p>Varsayılan çalışma davranışını buradan belirle</p>
+            </div>
+            <div class="panel-badge">Tercihler</div>
+          </div>
+
+          <div class="settings-grid">
+            <div class="field">
+              <label for="settingsDefaultSpeed">Varsayılan hız</label>
+              <select id="settingsDefaultSpeed">
+                <option value="safe">Güvenli</option>
+                <option value="normal">Normal</option>
+                <option value="fast">Hızlı</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="settingsDefaultFailStopThreshold">Varsayılan oto durdurma %</label>
+              <input id="settingsDefaultFailStopThreshold" type="number" min="1" max="100" />
+            </div>
+
+            <div class="field">
+              <label for="settingsCooldownEvery">Her kaç işlemde mola</label>
+              <input id="settingsCooldownEvery" type="number" min="0" />
+            </div>
+
+            <div class="field">
+              <label for="settingsCooldownMinMs">Mola min ms</label>
+              <input id="settingsCooldownMinMs" type="number" min="0" />
+            </div>
+
+            <div class="field">
+              <label for="settingsCooldownMaxMs">Mola max ms</label>
+              <input id="settingsCooldownMaxMs" type="number" min="0" />
+            </div>
+
+            <div class="toggle-stack">
+              <label class="toggle-line">
+                <input id="settingsSoundEnabled" type="checkbox" />
+                <span>Ses açık</span>
+              </label>
+
+              <label class="toggle-line">
+                <input id="settingsPreviewEnabled" type="checkbox" />
+                <span>Canlı önizleme açık</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="panel-actions">
+            <button id="saveSettingsBtn" class="secondary-btn">Ayarları Kaydet</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="action-row">
+        <div class="panel action-panel">
+          <div class="panel-header">
+            <div>
+              <h2>İşlem Kontrolü</h2>
+              <p>Instagram oturumunu aç ve otomasyonu başlat</p>
+            </div>
+            <div class="panel-badge">Kontrol</div>
+          </div>
+
+          <div class="action-buttons">
+            <button id="loginBtn" class="ghost-btn">Instagram Aç</button>
+            <button id="startBtn" class="primary-btn">Başlat / Devam Et</button>
+            <button id="retryFailedBtn" class="secondary-btn">Başarısızları Yeniden Dene</button>
+            <button id="retrySelectedBtn" class="secondary-btn">Seçili Başarısızları Dene</button>
+            <button id="stopBtn" class="danger-btn">Durdur</button>
+            <button id="clearStateBtn" class="ghost-btn">Durumu Sıfırla</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <div class="panel preview-panel">
+          <div class="panel-header">
+            <div>
+              <h2>Canlı Önizleme</h2>
+              <p id="previewUser">Kullanıcı: -</p>
+            </div>
+            <div class="panel-badge">Önizleme</div>
+          </div>
+
+          <p id="previewUrl" class="subtle-text">Profil: -</p>
+          <div id="previewPlaceholder">Henüz önizleme yok</div>
+          <img id="previewImage" alt="" />
+        </div>
+
+        <div class="panel failed-panel">
+          <div class="panel-header">
+            <div>
+              <h2>Başarısız Kullanıcılar</h2>
+              <p id="failedCountText">Başarısız kullanıcı sayısı: 0</p>
+            </div>
+            <div class="panel-badge">Liste</div>
+          </div>
+
+          <div class="panel-actions">
+            <button id="selectAllFailedBtn" class="ghost-btn">Hepsini Seç</button>
+            <button id="clearFailedSelectionBtn" class="ghost-btn">Seçimi Temizle</button>
+            <button id="openFailedBtn" class="secondary-btn">Dosyayı Aç</button>
+          </div>
+
+          <div id="failedList" class="failed-list"></div>
+        </div>
+
+        <div class="panel report-panel">
+          <div class="panel-header">
+            <div>
+              <h2>Rapor Ekranı</h2>
+              <p>Son çalışma özeti ve geçmiş kayıtlar</p>
+            </div>
+            <div class="panel-badge">Rapor</div>
+          </div>
+
+          <div id="latestReportBox" class="report-box">
+            <div>Henüz rapor yok.</div>
+          </div>
+
+          <div class="panel-actions">
+            <button id="clearReportsBtn" class="ghost-btn">Rapor Geçmişini Temizle</button>
+          </div>
+
+          <div id="reportsHistory" class="reports-history"></div>
+        </div>
+      </section>
+
+      <section class="bottom-grid">
+        <div class="panel log-panel">
+          <div class="panel-header">
+            <div>
+              <h2>Log</h2>
+              <p>Çalışma akışı ve hata kayıtları</p>
+            </div>
+            <div class="panel-badge">Kayıt</div>
+          </div>
+
+          <div class="file-links">
+            <div class="file-chip">
+              <span>Başarısız kullanıcılar</span>
+              <code>failed-users.txt</code>
+            </div>
+            <div class="file-chip">
+              <span>Çalışma logu</span>
+              <code>run-log.txt</code>
+            </div>
+          </div>
+
+          <div class="panel-actions">
+            <button id="openRunLogBtn" class="secondary-btn">Log Dosyasını Aç</button>
+          </div>
+
+          <pre id="logBox"></pre>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
