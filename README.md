@@ -63,15 +63,11 @@ dist/IG-Request-Cancel-Tool.exe
 
 ---
 
-# İndirme
+## İndirme
 
-Hazır `.exe` dosyasını indirmek için:
+Hazır sürümü indirmek için repo sayfasındaki **Releases** bölümüne girip son yayınlanan sürümü indirebilirsiniz.
 
-1. **Actions** sekmesine gir
-2. Son başarılı **Build and Export EXE** çalışmasını aç
-3. **Artifacts** bölümünden `IG-Request-Cancel-Tool` dosyasını indir
-
----
+[![Windows Sürümünü İndir](https://img.shields.io/badge/Windows-Sürümünü%20İndir-2ea44f?style=for-the-badge)](../../releases)
 
 # Ekran Görüntüleri
 
