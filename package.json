@@ -1,9 +1,9 @@
 {
-  "name": "ig-canceller-app",
+  "name": "ig-request-cancel-tool",
   "version": "1.0.0",
   "description": "Instagram İstek İptal Aracı",
   "main": "main.js",
-  "author": "Hudayfa",
+  "author": "Hudayfa Terler",
   "scripts": {
     "start": "electron .",
     "build": "electron-builder --win portable"
@@ -17,8 +17,8 @@
     "electron-builder": "^24.13.3"
   },
   "build": {
-    "appId": "com.hudayfa.igiptal",
-    "productName": "Instagram Istek Iptal Araci",
+    "appId": "com.hudayfa.igrequestcanceltool",
+    "productName": "IG Request Cancel Tool",
     "directories": {
       "output": "dist"
     },
@@ -27,15 +27,17 @@
       "preload.js",
       "renderer/**/*",
       "src/**/*",
+      "icon.ico",
       "package.json"
     ],
     "win": {
+      "icon": "icon.ico",
       "target": [
         "portable"
       ]
     },
     "portable": {
-      "artifactName": "Instagram-Istek-Iptal-Araci.exe"
+      "artifactName": "IG-Request-Cancel-Tool.exe"
     }
   }
 }
