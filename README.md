@@ -8,35 +8,43 @@
 
 [![Release](https://img.shields.io/github/v/release/FrostyPD/IG-REQUEST-CANCEL-TOOL)](https://github.com/FrostyPD/IG-REQUEST-CANCEL-TOOL/releases)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Windows](https://img.shields.io/badge/platform-Windows-blue)]()
+[![Platform](https://img.shields.io/badge/platform-Windows-blue)]()
 [![Stars](https://img.shields.io/github/stars/FrostyPD/IG-REQUEST-CANCEL-TOOL?style=social)](https://github.com/FrostyPD/IG-REQUEST-CANCEL-TOOL/stargazers)
 [![Downloads](https://img.shields.io/github/downloads/FrostyPD/IG-REQUEST-CANCEL-TOOL/total)](https://github.com/FrostyPD/IG-REQUEST-CANCEL-TOOL/releases)
 
 Instagram takip isteklerini otomatik ve güvenli bir şekilde silmenize yarayan masaüstü uygulaması.
 
+✔️ Açık kaynak  
+✔️ Şifre veya hesap bilgisi toplamaz  
+✔️ Tüm kod GitHub üzerinde incelenebilir  
+
 ---
 
-## ⬇️ İndir
+# ⬇️ İndir
 
 Windows için hazır EXE dosyasını indirmek için:
 
 [![Download](https://img.shields.io/badge/Download-Windows%20EXE-blue?style=for-the-badge&logo=windows)](https://github.com/FrostyPD/IG-REQUEST-CANCEL-TOOL/releases)
 
+Alternatif olarak **Releases** sayfasından indirebilirsiniz:
+
+https://github.com/FrostyPD/IG-REQUEST-CANCEL-TOOL/releases
+
 ---
 
-## 🎬 Demo
+# 🎬 Demo
 
 ![Demo](docs/demo.gif)
 
 ---
 
-## 📸 Uygulama Arayüzü
+# 📸 Uygulama Arayüzü
 
 ![Dashboard](docs/dashboard.png)
 
 ---
 
-## Özellikler
+# 🚀 Özellikler
 
 - HTML export dosyasından kullanıcıları parse eder
 - Playwright ile profillere gidip isteği iptal eder
@@ -51,17 +59,45 @@ Windows için hazır EXE dosyasını indirmek için:
 
 ---
 
-## Nasıl Çalışır
+# 🧠 Nasıl Çalışır
 
-1. Instagram hesap verisi export edilir
-2. Export içindeki takip isteği HTML dosyası okunur
-3. Kullanıcı listesi çıkarılır
-4. Playwright ile profil sayfaları ziyaret edilir
-5. Bekleyen takip isteği iptal edilir
+1. Instagram hesap verilerini indir
+2. Export klasöründen takip isteği HTML dosyasını bul
+3. Uygulamada **HTML Dosyası Seç** butonuna bas
+4. Instagram oturumunu aç
+5. **Başlat / Devam Et** butonuna bas
+
+Uygulama otomatik olarak bekleyen takip isteklerini iptal eder.
 
 ---
 
-## Kurulum (Geliştiriciler için)
+# ⚙️ Kullanım
+
+1️⃣ Instagram veri exportunu indir  
+2️⃣ Takip isteklerinin bulunduğu HTML dosyasını seç  
+3️⃣ Instagram oturumunu aç  
+4️⃣ Otomasyonu başlat  
+
+Uygulama işlemleri güvenli şekilde sırayla yapar.
+
+---
+
+# 🔒 Güvenlik
+
+Uygulama:
+
+- Hesap bilgisi toplamaz
+- Instagram API kullanmaz
+- Sadece tarayıcı otomasyonu yapar
+- Açık kaynak kodludur
+
+VirusTotal tarama sonucu:
+
+(VirusTotal linkini buraya ekleyebilirsin)
+
+---
+
+# 🛠 Kurulum (Geliştiriciler için)
 
 Projeyi çalıştırmak için:
 
@@ -70,28 +106,39 @@ npm install
 npx playwright install chromium
 npm start
 ```
-## Build Alma
 
-Uygulamanın portable EXE dosyasını oluşturmak için:
+# 🧱 Build Alma
+
+Uygulamanın Windows portable EXE dosyasını oluşturmak için:
 
 npm run build
 
-Oluşan dosya dist/ klasörünün içinde olacaktır.
+Oluşan dosya:
 
-## İndirme
+dist/
 
-Hazır .exe dosyasını indirmek için:
+klasörü içinde olacaktır.
 
-Releases sayfasına git
+# 📦 Proje Yapısı
+renderer/
+src/
+main.js
+preload.js
+package.json
 
-En son sürümü aç
+# ⚠️ Not
 
-.exe veya .rar dosyasını indir
+Instagram otomasyon işlemleri için hız limitleri uygulanır.
 
-Release sayfası:
-https://github.com/FrostyPD/IG-REQUEST-CANCEL-TOOL/releases
+Bu nedenle uygulama işlemleri:
 
-## Yasal Uyarı
+belirli aralıklarla yapılır
+
+güvenli gecikmeler kullanır
+
+spam riskini azaltır
+
+# ⚖️ Yasal Uyarı
 
 Bu proje Instagram / Meta ile bağlantılı değildir.
 
@@ -99,6 +146,8 @@ Sadece kullanıcıların kendi hesaplarındaki bekleyen takip isteklerini yönet
 
 Kullanım tamamen kullanıcının sorumluluğundadır.
 
-## Lisans
+# 📜 Lisans
 
 MIT License
+
+# ⭐ Eğer projeyi faydalı bulduysan repo'ya yıldız bırakmayı unutma!
