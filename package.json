@@ -1,43 +1,49 @@
 {
-  "name": "ig-request-cancel-tool",
+  "name": "instagram-istek-iptal-araci",
   "version": "1.0.0",
-  "description": "Instagram İstek İptal Aracı",
+  "description": "Instagram bekleyen takip isteklerini iptal eden araç",
   "main": "main.js",
-  "author": "Hudayfa Terler",
+  "author": "Hudayfa",
   "scripts": {
     "start": "electron .",
     "build": "electron-builder --win portable"
   },
   "dependencies": {
     "cheerio": "^1.0.0",
-    "playwright": "^1.54.1"
+    "playwright": "^1.58.2"
   },
   "devDependencies": {
     "electron": "^37.2.0",
     "electron-builder": "^24.13.3"
   },
   "build": {
-    "appId": "com.hudayfa.igrequestcanceltool",
-    "productName": "IG Request Cancel Tool",
+    "appId": "com.hudayfa.instagramiptal",
+    "productName": "Instagram Istek Iptal Araci",
     "directories": {
       "output": "dist"
     },
+    "asar": true,
     "files": [
       "main.js",
       "preload.js",
       "renderer/**/*",
       "src/**/*",
-      "icon.ico",
       "package.json"
     ],
+    "extraResources": [
+      {
+        "from": "node_modules/playwright-core/.local-browsers",
+        "to": "pw-browsers"
+      }
+    ],
     "win": {
-      "icon": "icon.ico",
       "target": [
         "portable"
-      ]
+      ],
+      "icon": "build/icon.ico"
     },
     "portable": {
-      "artifactName": "IG-Request-Cancel-Tool.exe"
+      "artifactName": "Instagram-Istek-Iptal-Araci.exe"
     }
   }
 }
