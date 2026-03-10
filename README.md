@@ -83,6 +83,24 @@ Uygulama otomatik olarak bekleyen takip isteklerini iptal eder.
 
 Uygulama işlemleri güvenli şekilde sırayla yapar.
 
+# 🤔 Instagram veri Exportu nasıl alınır?
+- Öncelik cihazımızdan instagrama giriş yapıyoruz.
+- Ayarlar kısmından "hesaplar merkezini buluyoruz.
+- Bilgilerin ve izinlerin kısmına tıklıyoruz.
+- Bilgilerini dışa aktar'a tıklıyoruz.
+- Dışa aktarım oluştur diyoruz.
+- Birden fazla profilimiz varsa hangisi olacağını seçiyoruz.
+- Cihaza aktar diyoruz.
+- Formatı "HTML" olarak seçili değilse "HTML" olarak seçiyoruz.
+- İstersek gerekli tarih aralığını seçiyoruz.
+- Dışa aktarımı başlat diyoruz.
+- Yaklaşık 30 dakika içerisinde "Bildir" kısmında yazan mail adresinize verilerinizin indirilmeye hazır olduğuna dair mail gelecektir.
+- Hazır olduğunda "Mevcut İndirmeler" kısmından "İndir" diyoruz.
+- İndirdiğimiz zip dosyasını arşivden çıkarıyoruz.
+- Arşivden çıkardığımız dosyanına içine girip bu dizinleri takip ediyoruz. /connections /followers_and_following
+- Burada ihtiyacımız olan "HTML" dosyasını "pending_follow_requests" adıyla bulacağız.
+- Artık bu dosyayı uygulamayı çalıştırdıktan sonra "HTML Dosyası Seç" Kısmına ekleyip kullanmaya başlayabilirsiniz.
+
 ---
 
 # 🔒 Güvenlik
