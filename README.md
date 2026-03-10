@@ -19,6 +19,9 @@ Instagram takip isteklerini otomatik ve güvenli bir şekilde silmenize yarayan 
 ✔️ Tüm kod GitHub üzerinde incelenebilir  
 
 ---
+# 👾 VirusTotal
+https://www.virustotal.com/gui/file/fc1bdcc63dd32a4f33a7a614b94571ee1cd8e2a46aad9477459cdfba9ac90171/detection
+
 
 # ⬇️ İndir
 
